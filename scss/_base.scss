@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin-inline: auto;
+}
+
+.title {
+  @include text($ff, 48px, 56px, 700, $paragraph);
+}
+
+.desc {
+  @include text($ff, 16px, 19px, 400, $paragraph);
+}

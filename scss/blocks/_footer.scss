@@ -1,0 +1,47 @@
+.footer {
+  background: $terciary;
+  display: flex;
+  justify-content: center;
+  gap: 108px;
+  padding: 106px 0 81px 0;
+
+  &__quiro {
+    max-width: 431px;
+
+    &__title {
+      margin-bottom: 26px;
+      @include text($ff, 24px, 28px, 600, $paragraph);
+    }
+
+    &__desc {
+      @include text($ff, 16px, 19px, 400, $paragraph);
+    }
+  }
+
+  &__contact {
+    .segment {
+      margin-bottom: 37px;
+
+      &__title {
+        margin-bottom: 9px;
+        @include text($ff, 20px, 23px, 600, $paragraph);
+      }
+
+      &__desc {
+        @include text($ff, 16px, 19px, 400, $paragraph);
+      }
+    }
+  }
+
+  &__hour{
+    &__title{
+        margin-bottom: 17px;
+        @include text($ff, 20px, 23px, 600, $paragraph);
+    }
+
+    &__time{
+        margin-bottom: 15px;
+        @include text($ff, 16px, 19px, 400, $paragraph);
+    }
+  }
+}

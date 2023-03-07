@@ -1,0 +1,60 @@
+.doctor-section {
+  margin-bottom: 129px;
+
+  .title {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  .desc {
+    text-align: center;
+    max-width: 837px;
+    margin-inline: auto;
+    margin-bottom: 123px;
+  }
+}
+
+.doctor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 27px;
+
+  &-card {
+    background: #f9f1fe;
+    border-radius: 20px;
+    padding: 44px 38px 33px;
+
+    &__info {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      margin-bottom: 25px;
+
+      .data {
+        &__name {
+          @include text($ff, 20px, 23px, 600, $paragraph);
+          margin-bottom: 3px;
+        }
+
+        &__profession {
+          @include text($ff, 16px, 19px, 400, $text);
+        }
+      }
+    }
+
+    &__text {
+      margin-bottom: 39px;
+      @include text($ff, 16px, 19px, 400, $text);
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      background: $primary;
+      border-radius: 50px;
+      padding: 10px 49px;
+      @include text($ff, 20px, 23px, 600, $terciary);
+      text-align: center;
+    }
+  }
+}
