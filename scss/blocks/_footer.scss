@@ -5,8 +5,31 @@
   gap: 108px;
   padding: 106px 0 81px 0;
 
+  @include desktop-small{
+    padding: 106px 10px;
+    gap: 54px;
+  }
+
+  @include tablet{
+    justify-content: space-evenly;
+    
+  }
+
+  @include mobile{
+    gap: 34px;
+    padding: 45px 10px;
+  }
+
   &__quiro {
     max-width: 431px;
+
+    @include desktop-small{
+      max-width: 310px;
+    }
+
+    @include tablet{
+      display: none;
+    }
 
     &__title {
       margin-bottom: 26px;
@@ -25,6 +48,10 @@
       &__title {
         margin-bottom: 9px;
         @include text($ff, 20px, 23px, 600, $paragraph);
+
+        @include mobile{
+          font-family: 7px;
+        }
       }
 
       &__desc {

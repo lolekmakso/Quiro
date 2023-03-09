@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/owl.theme.default.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -19,8 +23,9 @@
     <div class="container">
       <header class="header">
         <a class="header__logo" href="#">Quiro Diagnostic Center</a>
+        <a class="header__logo__tablet" href="#">Quiro</a>
         <nav class="nav">
-          <ul class="nav__ul">
+          <ul class="nav__ul" id="headerUl">
             <li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
             <li class="nav__li"><a href="#" class="nav__a">Service</a></li>
             <li class="nav__li"><a href="#" class="nav__a">Doctors</a></li>
@@ -28,10 +33,14 @@
             <li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
           </ul>
         </nav>
-        <div class="header__search">
+        <div class="header__search" id="headerUl">
           <input type="search" placeholder="Search Here" />
           <img src="img/icons/search.svg" alt="search" />
+          <span class="material-symbols-outlined" id="close" onclick="navToggle()"> close </span>
         </div>
+      
+          <span class="material-symbols-outlined" onclick="navToggle()"> menu </span>
+       
       </header>
 
       <section class="main-section">
@@ -148,80 +157,116 @@
         <div class="doctor">
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user1.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user1.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Kornelia Atkinson, MD</div>
                 <div class="data__profession">Interventional Cardiologist</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
 
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user2.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user2.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Humera Wood, MD</div>
                 <div class="data__profession">OB-GYN Nurse Practitioner</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
 
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user3.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user3.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Athena Barrow, MD</div>
                 <div class="data__profession">Critical Care Specialist</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
 
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user4.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user4.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Sion Jennings, MD</div>
                 <div class="data__profession">Nurse Practitioner</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
 
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user5.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user5.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Natasha Grant, MD</div>
                 <div class="data__profession">Immunologist</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
 
           <div class="doctor-card">
             <div class="doctor-card__info info">
-              <div class="info__img"><img src="img/users/user6.svg" alt=""></div>
+              <div class="info__img">
+                <img src="img/users/user6.svg" alt="" />
+              </div>
               <div class="info_data data">
                 <div class="data__name">Zubair Mac, MD</div>
                 <div class="data__profession">Nurse Practitioner</div>
               </div>
             </div>
-            <div class="doctor-card__text">Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing commodo. Mattis in at amet, facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus sed adipiscing</div>
+            <div class="doctor-card__text">
+              Velit faucibus sed adipiscing commodo. Mattis in at amet,
+              facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
+              sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
+              Quam sit risus egestas morbi.Velit faucibus sed adipiscing
+            </div>
             <a href="#" class="doctor-card__btn">Book Appointment</a>
-
           </div>
         </div>
       </section>
@@ -233,12 +278,17 @@
           <a href="#">Subscribe</a>
         </div>
       </section>
-
     </div>
     <footer class="footer">
       <div class="footer__quiro">
         <div class="footer__quiro__title">Quiro Diagnostic Center</div>
-        <div class="footer__quiro__desc">Magnis facilisis tortor volutpat lobortis ac id. Libero enim nunc etiam consectetur lacus. In malesuada dictum turpis amet porttitor viverra laoreet at commodo. Pellentesque vitae id semper nec sollicitudin. Quis purus, mus consectetur pharetra ipsum facilisis amet cras purus.</div>
+        <div class="footer__quiro__desc">
+          Magnis facilisis tortor volutpat lobortis ac id. Libero enim nunc
+          etiam consectetur lacus. In malesuada dictum turpis amet porttitor
+          viverra laoreet at commodo. Pellentesque vitae id semper nec
+          sollicitudin. Quis purus, mus consectetur pharetra ipsum facilisis
+          amet cras purus.
+        </div>
       </div>
       <div class="footer__contact">
         <div class="footer__contact__segment segment">
@@ -247,7 +297,7 @@
         </div>
         <div class="footer__contact__segment segment">
           <div class="segment__title">Telephone</div>
-          <div class="segment__desc">(07)40127246      (02)67566577</div>
+          <div class="segment__desc">(07)40127246 (02)67566577</div>
         </div>
         <div class="footer__contact__segment segment">
           <div class="segment__title">Email</div>
@@ -272,5 +322,6 @@
     ></script>
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/index.js"></script>
+    <script src="script/script-burger.js"></script>
   </body>
 </html>

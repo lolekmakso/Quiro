@@ -30,6 +30,10 @@ li {
 
 .title {
   @include text($ff, 48px, 56px, 700, $paragraph);
+
+  @include tablet-small{
+    font-size: 32px;
+  }
 }
 
 .desc {

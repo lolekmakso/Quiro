@@ -1,3 +1,7 @@
+.material-symbols-outlined {
+  display: none;
+}
+
 .header {
   padding: 50px 0;
   display: flex;
@@ -7,10 +11,35 @@
 
   &__logo {
     @include text($ff, 24px, 28px, 600, $paragraph);
+
+    @include tablet {
+      display: none;
+    }
+
+    @include tablet-small {
+      display: block;
+    }
+  }
+
+  &__logo__tablet {
+    display: none;
+    @include text($ff, 24px, 28px, 600, $paragraph);
+
+    @include tablet {
+      display: block;
+    }
+
+    @include tablet-small {
+      display: none;
+    }
   }
 
   &__search {
     position: relative;
+
+    @include tablet-small{
+      display: none;
+    }
 
     input {
       background: $black;
@@ -33,6 +62,66 @@
       right: 15px;
     }
   }
+
+  @include mobile {
+     span{
+      display: block;
+     }
+
+
+    .nav {
+      &__ul {
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        background: $paragraph;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        z-index: 2;
+        transform: translateX(-120%);
+        transition: $transition;
+
+        a {
+          color: $white;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__ul._active{
+      transform: translateX(0);
+    }
+
+    &__search {
+      position: fixed;
+      width: 30%;
+      height: 45px;
+      left: 0;
+      z-index: 2;
+      transform: translateX(-120%);
+      transition: $transition;
+
+      input {
+        width: 100%;
+      }
+
+      .material-symbols-outlined {
+        display: inline-block;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+      }
+    }
+
+    &__search._active{
+      transform: translateX(0);
+    }
+  }
 }
 
 .nav {
@@ -40,6 +129,10 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @include tablet {
+      gap: 16px;
+    }
   }
 
   &__a {
@@ -60,16 +153,26 @@
       transition: $transition;
     }
 
-    &:hover{
-        color: $primary;
+    &:hover {
+      color: $primary;
     }
 
     &._active {
       color: $primary;
       font-weight: 600;
-      &::before{
+      &::before {
         width: calc(100% - 10px);
       }
     }
+  }
+}
+
+@include tablet-small{
+  .headerUl._active{
+    transform: translateX(0);
+  }
+
+  .nav__ul._active{
+    transform: translateX(0);
   }
 }

@@ -4,6 +4,7 @@
   .title {
     margin-bottom: 70px;
     text-align: center;
+
   }
 
   .desc {
@@ -19,10 +20,30 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 27px;
 
+  @include desktop-small{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include tablet-small{
+    grid-template-columns: 1fr;
+  }
+
   &-card {
     background: #f9f1fe;
     border-radius: 20px;
     padding: 44px 38px 33px;
+
+    @include tablet-small{
+      margin-left: 120px;
+      margin-right: 120px;
+    }
+
+    @include mobile{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+
 
     &__info {
       display: flex;
@@ -55,6 +76,8 @@
       padding: 10px 49px;
       @include text($ff, 20px, 23px, 600, $terciary);
       text-align: center;
+
+      
     }
   }
 }
